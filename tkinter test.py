@@ -1,7 +1,7 @@
 import tkinter as tk
 
 
-LARGE_FONT = ("verdana", 12)
+LARGE_FONT = ("Verdana", 12)
 
 
 class SeaofBTCapp(tk.Tk):
