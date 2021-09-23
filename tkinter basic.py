@@ -12,7 +12,11 @@ root = Tk()
 # myLabel3.grid(row=2, column=2)
 #####
 
-myButton = Button(root, text="Click", state=DISABLED)
+def myClick():
+    myLabel = Label(root, text="ClickED!!")
+    myLabel.pack()
+
+myButton = Button(root, text="Click", padx=50)
 myButton.pack()
 
 
