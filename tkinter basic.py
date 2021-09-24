@@ -55,6 +55,17 @@ def equalButton():
     entry.delete(0, END)
     entry.insert(0, first + int(second_number))
 
+def subtractButton():
+    pass
+
+def multiplyButton():
+    pass
+
+def divideButton():
+    pass
+
+
+
 
 
 button_0 = Button(root, width=9, text=str(0), pady=10, command=lambda: button_click(0))
@@ -70,6 +81,9 @@ button_9 = Button(root, width=9, text=str(9), pady=10, command=lambda: button_cl
 button_clear = Button(root, width=9, text="clear", pady=10, command=clearButton).grid(row=1, column=3)
 button_add = Button(root, width=9, text="+", pady=10, command=addButton).grid(row=2, column=3)
 button_equal = Button(root, width=9, text="=", pady=10, command=equalButton).grid(row=3, column=3)
+button_subtract = Button(root, width=9, text="-", pady=10, command=subtractButton)#.grid(row=, column=)
+button_multiply = Button(root, width=9, text="*", pady=10, command=subtractButton)#.grid(row=, column=)
+button_divide = Button(root, width=9, text="/", pady=10, command=subtractButton)#.grid(row=, column=)
 
 
 
