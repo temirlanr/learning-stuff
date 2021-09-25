@@ -47,25 +47,47 @@ def clearButton():
 def addButton():
     first_number = entry.get()
     global first
+    global action
+    action = "add"
+    first = int(first_number)
+    entry.delete(0, END)
+
+def subtractButton():
+    first_number = entry.get()
+    global first
+    global action
+    action = "subtract"
+    first = int(first_number)
+    entry.delete(0, END)
+
+def multiplyButton():
+    first_number = entry.get()
+    global first
+    global action
+    action = "multiply"
+    first = int(first_number)
+    entry.delete(0, END)
+
+def divideButton():
+    first_number = entry.get()
+    global first
+    global action
+    action = "divide"
     first = int(first_number)
     entry.delete(0, END)
 
 def equalButton():
+    global action
     second_number = entry.get()
     entry.delete(0, END)
-    entry.insert(0, first + int(second_number))
-
-def subtractButton():
-    pass
-
-def multiplyButton():
-    pass
-
-def divideButton():
-    pass
-
-
-
+    if action == "add":
+        entry.insert(0, first + int(second_number))
+    elif action == "subtract":
+        entry.insert(0, first - int(second_number))
+    elif action == "multiply":
+        entry.insert(0, first * int(second_number))
+    elif action == "divide":
+        entry.insert(0, first / int(second_number))
 
 
 button_0 = Button(root, width=9, text=str(0), pady=10, command=lambda: button_click(0))
@@ -82,10 +104,8 @@ button_clear = Button(root, width=9, text="clear", pady=10, command=clearButton)
 button_add = Button(root, width=9, text="+", pady=10, command=addButton).grid(row=1, column=3)
 button_equal = Button(root, width=9, text="=", pady=10, command=equalButton).grid(row=4, column=2)
 button_subtract = Button(root, width=9, text="-", pady=10, command=subtractButton).grid(row=2, column=3)
-button_multiply = Button(root, width=9, text="*", pady=10, command=subtractButton).grid(row=3, column=3)
-button_divide = Button(root, width=9, text="/", pady=10, command=subtractButton).grid(row=4, column=3)
-
-
+button_multiply = Button(root, width=9, text="*", pady=10, command=multiplyButton).grid(row=3, column=3)
+button_divide = Button(root, width=9, text="/", pady=10, command=divideButton).grid(row=4, column=3)
 
 # don't judge me...
 for i in range(10):
@@ -110,8 +130,6 @@ for i in range(10):
         globals()["button_"+str(i)].grid(row=1, column=1)
     elif(i==9):
         globals()["button_"+str(i)].grid(row=1, column=2)
-
-
 
 
 root.mainloop()
