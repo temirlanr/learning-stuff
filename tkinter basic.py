@@ -78,12 +78,12 @@ button_6 = Button(root, width=9, text=str(6), pady=10, command=lambda: button_cl
 button_7 = Button(root, width=9, text=str(7), pady=10, command=lambda: button_click(7))
 button_8 = Button(root, width=9, text=str(8), pady=10, command=lambda: button_click(8))
 button_9 = Button(root, width=9, text=str(9), pady=10, command=lambda: button_click(9))
-button_clear = Button(root, width=9, text="clear", pady=10, command=clearButton).grid(row=1, column=3)
-button_add = Button(root, width=9, text="+", pady=10, command=addButton).grid(row=2, column=3)
-button_equal = Button(root, width=9, text="=", pady=10, command=equalButton).grid(row=3, column=3)
-button_subtract = Button(root, width=9, text="-", pady=10, command=subtractButton)#.grid(row=, column=)
-button_multiply = Button(root, width=9, text="*", pady=10, command=subtractButton)#.grid(row=, column=)
-button_divide = Button(root, width=9, text="/", pady=10, command=subtractButton)#.grid(row=, column=)
+button_clear = Button(root, width=9, text="clear", pady=10, command=clearButton).grid(row=4, column=0)
+button_add = Button(root, width=9, text="+", pady=10, command=addButton).grid(row=1, column=3)
+button_equal = Button(root, width=9, text="=", pady=10, command=equalButton).grid(row=4, column=2)
+button_subtract = Button(root, width=9, text="-", pady=10, command=subtractButton).grid(row=2, column=3)
+button_multiply = Button(root, width=9, text="*", pady=10, command=subtractButton).grid(row=3, column=3)
+button_divide = Button(root, width=9, text="/", pady=10, command=subtractButton).grid(row=4, column=3)
 
 
 
