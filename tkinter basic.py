@@ -1,36 +1,6 @@
 from tkinter import *
 
 root = Tk()
-
-#####
-# myLabel1 = Label(root, text="Hello World!")
-# myLabel2 = Label(root, text="My name is TemirlaN!!!")
-# myLabel3 = Label(root, text="       ")
-
-# myLabel1.grid(row=0, column=0)
-# myLabel2.grid(row=1, column=5)
-# myLabel3.grid(row=2, column=2)
-#####
-
-#####
-# def Click():
-#     clickLabel = Label(root, text="ClickED!!")
-#     clickLabel.pack()
-
-# def entryClick():
-#     entryLabel = Label(root, text="Hi "+entry.get())
-#     entryLabel.pack()
-
-# entryLabel = Label(root, text="Enter your name: ").pack()
-
-# entry = Entry(root, width=100, borderwidth=3)
-# entry.pack()
-# # entry.insert(0, "Enter your name...")
-
-# myButton = Button(root, text="Click", padx=50, command=entryClick, fg="white", bg="grey")
-# myButton.pack()
-#####
-
 root.title("CalculatOR!!!!")
 
 entry = Entry(root, width=40, borderwidth=3)
@@ -100,7 +70,7 @@ button_6 = Button(root, width=9, text=str(6), pady=10, command=lambda: button_cl
 button_7 = Button(root, width=9, text=str(7), pady=10, command=lambda: button_click(7))
 button_8 = Button(root, width=9, text=str(8), pady=10, command=lambda: button_click(8))
 button_9 = Button(root, width=9, text=str(9), pady=10, command=lambda: button_click(9))
-button_clear = Button(root, width=9, text="clear", pady=10, command=clearButton).grid(row=4, column=0)
+button_clear = Button(root, width=9, text="clear", pady=10, command=clearButton, fg="white", bg="grey").grid(row=4, column=0)
 button_add = Button(root, width=9, text="+", pady=10, command=addButton).grid(row=1, column=3)
 button_equal = Button(root, width=9, text="=", pady=10, command=equalButton).grid(row=4, column=2)
 button_subtract = Button(root, width=9, text="-", pady=10, command=subtractButton).grid(row=2, column=3)
